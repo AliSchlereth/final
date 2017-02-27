@@ -13,7 +13,7 @@ function createLink (event){
   console.log("win")
 
   var link = getLinkData();
-
+  $("#notice").html('');
   $.post("/api/v1/links", link)
    .then( renderLink )
    .fail( displayFailure )
@@ -54,5 +54,6 @@ function clearLink() {
 }
 
 function displayFailure(failureData){
+  $("#notice").html("FAILED attempt to create new Link: " + failureData.responseText);
   console.log("FAILED attempt to create new Link: " + failureData.responseText);
 }

@@ -21,5 +21,6 @@ function updateLinkStatus(link) {
 }
 
 function displayFailure(failureData){
+  $("#notice").html("FAILED attempt to create new Link: " + failureData.responseText);
   console.log("FAILED attempt to update Link: " + failureData.responseText);
 }
