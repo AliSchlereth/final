@@ -13,10 +13,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Configure static file server for tests with Cache-Control for performance.
-<<<<<<< HEAD
-=======
   config.public_file_server.enabled = true
->>>>>>> 1e8d6aac1c36df844499911938b910d81b7d4189
   config.public_file_server.headers = { 'Cache-Control' => 'public, max-age=3600' }
 
   # Show full error reports and disable caching.

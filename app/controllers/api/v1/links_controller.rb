@@ -1,16 +1,9 @@
 class Api::V1::LinksController < ApplicationController
 
-<<<<<<< HEAD
-  def update
-    @link = Link.find(params[:id])
-    if @link.update_attributes(link_params)
-      render json: @link
-=======
   def create
     @link = Link.new link_params
     if @link.save
       render json: @link, status: 201
->>>>>>> 1e8d6aac1c36df844499911938b910d81b7d4189
     else
       render json: @link.errors.full_messages, status: 500
     end
@@ -31,10 +24,6 @@ class Api::V1::LinksController < ApplicationController
   private
 
   def link_params
-<<<<<<< HEAD
-    params.permit(:read)
-=======
     params.permit(:title, :url, :read)
->>>>>>> 1e8d6aac1c36df844499911938b910d81b7d4189
   end
 end

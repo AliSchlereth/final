@@ -13,11 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-<<<<<<< HEAD
-      resources :links, only: [:update]
-=======
       resources :links, only: [:create, :update]
->>>>>>> 1e8d6aac1c36df844499911938b910d81b7d4189
     end
   end
 end
