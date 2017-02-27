@@ -11,6 +11,7 @@ describe "user signs in" do
       click_on "Submit"
 
       expect(current_path).to eq(root_path)
+      expect(page).to have_content("You have signed in.")
     end
   end
 end
