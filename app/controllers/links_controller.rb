@@ -1,8 +1,8 @@
 class LinksController < ApplicationController
   def index
     if current_user
-      @links = current_user.links
-      @hot_links = current_user.links.hot
+      @links = current_user.links.reverse
+      @hot_links = Link.hot
     else
       redirect_to :login
     end
