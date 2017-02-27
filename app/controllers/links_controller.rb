@@ -5,6 +5,5 @@ class LinksController < ApplicationController
     else
       redirect_to :login
     end
-    # @hot_links = current_user.links.hot
   end
 end
