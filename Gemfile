@@ -18,6 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'better_errors', group: :development
 gem 'react-rails'
 gem "validate_url"
+gem 'faraday'
 
 # gem 'unicorn'
 

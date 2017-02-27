@@ -7,7 +7,7 @@ RSpec.describe "can mark links as read", :js => :true do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     visit "/"
-    save_and_open_page
+
     within('.link .link_read') do
       expect(page).to have_text("false")
     end
