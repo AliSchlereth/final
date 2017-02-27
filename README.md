@@ -12,7 +12,11 @@ The app has phantom.js, a headless webdriver installed for JS testing.
 
 #### Setup
 
+<<<<<<< HEAD
 To set it up you will just need to run `npm install phantomjs` from within your project folder. Everything else will be installed with Bundle.
+=======
+To set it up you will just need to run `npm install phantomjs -g`. Everything else will be installed with Bundle.
+>>>>>>> 1e8d6aac1c36df844499911938b910d81b7d4189
 
 #### Use
 
