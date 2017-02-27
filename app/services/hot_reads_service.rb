@@ -9,8 +9,28 @@ class HotReadsService
   end
 
   def update
-    @conn.post 'links', {link: @link.url}
+    response = @conn.post 'links', {link: @link.url}
+    current_hot_reads = JSON.parse(response.body)['current_hot_reads']
+    update_links(current_hot_reads)
+    response
   end
 
+  def update_links(current_hot_reads)
+    hot_urls = scope_to_links(current_hot_reads)
+    Link.all.each do |link|
+      if hot_urls.include?(link.url)
+        link.update_attributes(hot_status: "hot")
+      else
+        link.update_attributes(hot_status: "reg")
+      end
+    end
+    binding.pry
+  end
+
+  def scope_to_links(current_hot_reads)
+    current_hot_reads.map do |hot_read|
+      hot_read['url']
+    end
+  end
 
 end
