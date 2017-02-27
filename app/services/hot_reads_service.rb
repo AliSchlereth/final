@@ -17,6 +17,17 @@ class HotReadsService
 
   def update_links(current_hot_reads)
     hot_urls = scope_to_links(current_hot_reads)
+    update_hot_statuses(hot_urls)
+    update_top_link(current_hot_reads[0])
+  end
+
+  def scope_to_links(current_hot_reads)
+    current_hot_reads.map do |hot_read|
+      hot_read['url']
+    end
+  end
+
+  def update_hot_statuses(hot_urls)
     Link.all.each do |link|
       if hot_urls.include?(link.url)
         link.update_attributes(hot_status: "hot")
@@ -24,13 +35,11 @@ class HotReadsService
         link.update_attributes(hot_status: "reg")
       end
     end
-    binding.pry
   end
 
-  def scope_to_links(current_hot_reads)
-    current_hot_reads.map do |hot_read|
-      hot_read['url']
-    end
+  def update_top_link(top_read)
+    top = Link.find_by(url: top_read['url'])
+    top.update_attributes(hot_status: "top")
   end
 
 end

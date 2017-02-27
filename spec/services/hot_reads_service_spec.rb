@@ -5,6 +5,7 @@ describe "Hot Reads is Updated" do
     a = Link.create(url: "https://a.com", title: "title")
     b = Link.create(url: "https://b.com", title: "title")
     d = Link.create(url: "https://d.com", title: "title")
+    turing = Link.create(url: "https://turing.io", title: "Turing")
 
     service = HotReadsService.new(a)
     response = service.update
