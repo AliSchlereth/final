@@ -15,17 +15,12 @@ gem 'responders'
 gem 'awesome_print'
 gem 'sprockets-es6'
 gem 'bcrypt', '~> 3.1.7'
-gem 'better_errors', group: :development
+# gem 'better_errors', group: :development
 gem 'react-rails'
 
 # gem 'unicorn'
 
 # gem 'capistrano-rails', group: :development
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'better_errors'
-end
-
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
