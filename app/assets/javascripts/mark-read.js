@@ -19,6 +19,7 @@ $(document).ready(function(){
 function updateReadStatus(data) {
   var linkID = data.id;
   $('#link-' + linkID).children('.link_read').html("true");
+  $('.mark-read').removeClass('mark-read').addClass('mark-unread').html("Mark as Unread")
 }
 
 function onFail(errors) {
