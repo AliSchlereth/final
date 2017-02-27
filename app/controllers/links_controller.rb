@@ -7,4 +7,8 @@ class LinksController < ApplicationController
       redirect_to :login
     end
   end
+
+  def edit
+    @link = Link.find(params[:id])
+  end
 end
