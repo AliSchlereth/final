@@ -11,6 +11,7 @@ describe "user creates an account" do
       click_on "Submit"
 
       expect(current_path).to eq(root_path)
+      expect(page).to have_content("You have successfully signed up.")
     end
   end
 end
