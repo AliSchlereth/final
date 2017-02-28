@@ -12,7 +12,7 @@ RSpec.describe "can mark links as read", :js => :true do
       expect(page).to have_text("false")
     end
     click_on "Mark as Read"
-    sleep(2)
+    sleep(3)
     within('.link .link_read') do
       expect(page).to have_text("true")
     end
@@ -30,7 +30,7 @@ RSpec.describe "can mark links as read", :js => :true do
       expect(page).to have_text("true")
     end
     click_on "Mark as Unread"
-    sleep(2)
+    sleep(3)
     within('.link .link_read') do
       expect(page).to have_text("false")
     end
