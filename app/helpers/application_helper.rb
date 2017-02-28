@@ -4,7 +4,7 @@ module ApplicationHelper
     if link.read == true
       "denote-read"
     else
-      "not-read"
+      "denote-unread"
     end
   end
 
