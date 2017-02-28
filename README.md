@@ -1,6 +1,7 @@
 # URLockBox
 
 This is an app for tracking links you'd like to read as well as whether or not you have read them.
+Visit in production: [https://rocky-sea-61967.herokuapp.com/](https://rocky-sea-61967.herokuapp.com/)
 
 # How to install
 
@@ -26,7 +27,6 @@ Next: run the following command in your terminal:
 
 `rake db:create db:migrate db:test:prepare`
 
-
 ### Fifth: 
  Go ahead and run `rspec` - make sure all the
 
@@ -34,11 +34,16 @@ tests pass. If not, you might be missing a gem or maybe you should go back and r
 
 `rake db:test:prepare` 
 
+### Sixth:  
+Run the app locally 
+`rails s`
+Visit
+[http://localhost:3000](http://localhost:3000)
+
 ## Technical details:
 
 A Rails API storing a large amount of data in a PostgreSQL database. Tests written
-in rspec-rails. Coverage provided by 
-simplecov.x
+in rspec-rails. Coverage provided by simplecov.
 
 ## Licensing
 
