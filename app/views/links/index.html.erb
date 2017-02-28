@@ -17,15 +17,15 @@
       <p class='link-title'><%= link.title %></p>
       <p class='link-url'> <%=link_to link.url, link.url %></p>
       <p class="link_read"><%= link.read %></p>
-      <p class="link_buttons">
+      <div class="link_buttons">
         <% if link.read == false %>
-          <p><button class="mark-read">Mark as Read</button></p>
+          <button class="mark-read">Mark as Read</button>
         <% else %>
-          <p><button class="mark-unread">Mark as Unread</button></p>
+          <button class="mark-unread">Mark as Unread</button>
         <% end  %>
-        <p><%= link_to "Edit", edit_link_path(link), class:"button" %></p>
-        <p><button class='delete-link'>Delete</button></p>
-      </p>
+        <%= link_to "Edit", edit_link_path(link), class:"button" %>
+        <button class='delete-link'>Delete</button>
+      </div>
     </div>
     <% end %>
 </div>

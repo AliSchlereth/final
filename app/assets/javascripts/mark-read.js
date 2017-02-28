@@ -19,7 +19,8 @@ $(document).ready(function(){
 function updateReadStatus(data) {
   var linkID = data.id;
   $('#link-' + linkID).children('.link_read').html("true");
-  $('.mark-read').removeClass('mark-read').addClass('mark-unread').html("Mark as Unread");
+  var markReadButton = $('#link-' + linkID).children('.link_buttons').children('.mark-read');
+  markReadButton.removeClass('mark-read').addClass('mark-unread').html("Mark as Unread");
   $('#link-' + linkID).addClass('denote-read');
 }
 

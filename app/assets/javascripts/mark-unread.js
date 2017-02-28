@@ -11,15 +11,16 @@ $(document).ready(function(){
       method: 'PATCH',
       data: {read: false}
     })
-    .done(updateReadStatus)
+    .done(updateUnReadStatus)
     .fail(onFail);
   })
 })
 
-function updateReadStatus(data) {
+function updateUnReadStatus(data) {
   var linkID = data.id;
   $('#link-' + linkID).children('.link_read').html("false");
-  $('.mark-unread').removeClass('mark-unread').addClass('mark-read').html("Mark as Read");
+  var markUnReadButton = $('#link-' + linkID).children('.link_buttons').children('.mark-unread');
+  markUnReadButton.removeClass('mark-unread').addClass('mark-read').html("Mark as Read");
   $('#link-' + linkID).removeClass('denote-read');
 }
 

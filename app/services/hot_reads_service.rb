@@ -39,7 +39,7 @@ class HotReadsService
 
   def update_top_link(top_read)
     top = Link.find_by(url: top_read['url'])
-    top.update_attributes(hot_status: "top link")
+    top.update_attributes(hot_status: "top link") if top
   end
 
 end
